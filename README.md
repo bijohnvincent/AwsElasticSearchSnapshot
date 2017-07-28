@@ -50,7 +50,7 @@ Add this in 'inline policies'
 ```
 ## Shceduling snapshots
 Create a Rule in AWS cloudWatch Event for scheduling snapshots. 
-* Select 'Schedule' and specify a 'Cron Expression' ()
+* Select 'Schedule' and specify a 'Cron Expression' (eg: 05 00 ? * * *)
 * In 'Targets', select the Lambda function you created. Recommend to 'Configure version/alias'
 * You may leave 'Configure input' as is if you want to create a snapsot of indices together.
 * If you have multiple indices, it is recommended to take snapshot separately so that you can resore it individually. To create separate snapshots for each group of indices, select 'Constant (JSON text)' and add your index pattern name as in below format:
