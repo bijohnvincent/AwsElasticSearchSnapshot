@@ -48,7 +48,7 @@ Add this in 'inline policies'
     ]
 }
 ```
-## Shceduling snapshots
+## Scheduling snapshots
 Create a Rule in AWS cloudWatch Event for scheduling snapshots. 
 * Select 'Schedule' and specify a 'Cron Expression' (eg: 05 00 ? * * *)
 * In 'Targets', select the Lambda function you created. Recommend to 'Configure version/alias'
