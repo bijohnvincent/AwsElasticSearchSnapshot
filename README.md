@@ -48,6 +48,20 @@ Add this in 'inline policies'
     ]
 }
 ```
+## ElasticSearch resource policy
+Add resource policy in following format to the existing statement.
+```
+{
+  "Sid": "",
+  "Effect": "Allow",
+  "Principal": {
+    "AWS": "arn:aws:sts::<AWS account number>:assumed-role/<Name of above IAM role>/<Name of lambda function>"
+  },
+  "Action": "es:*",
+  "Resource": "arn:aws:es:<region>:<AWS account number>:domain/<ES domain name>/*"
+}
+```
+
 ## Scheduling snapshots
 Create a Rule in AWS cloudWatch Event for scheduling snapshots. 
 * Select 'Schedule' and specify a 'Cron Expression' (eg: 05 00 ? * * *)
